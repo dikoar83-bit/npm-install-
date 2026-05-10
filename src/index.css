@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-zinc-950: #050505;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-white antialiased selection:bg-white selection:text-black;
+  }
+}
+
+.editorial-header {
+  @apply flex justify-between items-end border-b border-zinc-800 pb-6;
+}
+
+.glass {
+  @apply bg-zinc-900/40 backdrop-blur-xl border border-white/10;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent;
+}
